@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <div class="card" style="background-color: #222;color: #fff;width: 50%; margin: auto;padding-left: 20px;padding-bottom: 20px;padding-right: 20px;padding-top: 20px;margin-bottom: 100px;margin-top: 50px;">
+        <div class="text-center" ><h1 style="color: #fff;">Update you profile informations</h1></div>
+        <form  method="post" enctype="multipart/form-data">
+                    
+            {% csrf_token %}
+            {{form | crispy }}
+            <div class="text-center">
+                <input type="submit" value="submit" class="btn btn-primary " style="width: 200px;">
+            </div>
+            </form>
+    </div>
+
+
+{% endblock %}

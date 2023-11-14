@@ -1,0 +1,348 @@
+.navbar-brand{
+    font-size: 24px !important;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+    font-weight: bolder !important;
+}
+body, html {
+    width: 100% !important;
+}
+
+body {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.95)) !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #fff;
+    padding-top: 60px !important;
+    font-family: Arial, sans-serif !important;
+}
+header {
+    padding: 10px 0;
+}
+
+.navbar {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+/* the cover */
+.hero {
+    background-image: url('../images/cover/cov8.jpg'); 
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0;
+}
+.hero img{
+    display: inline;
+    text-align:center;
+}
+
+.hero h1 {
+    color: #fff; /* White */
+    font-family: Copperplate;
+    font-weight:bolder;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #fff !important; /* White */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #DE8D00 !important;
+    border: none !important;
+    border-radius: 5px !important;
+    text-transform: uppercase !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #c0392b !important;
+}
+.container {
+    margin-top: 20px !important;
+}
+.separator {
+    height: 1px; /* Adjust the height of the separator as needed */
+    background: linear-gradient(to right, black 0, #DE8D00 30%, #DE8D00 70%, black 100%);
+    
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+p {
+    font-size: 18px;
+    color: #666 !important;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.title {
+    color: #DE8D00; 
+    font-family: Copperplate;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
+.news-card {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.news-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-title {
+    background: rgba(0, 0, 0, 0.8);
+    color: #DE8D00; 
+    padding: 10px;
+    font-family: Copperplate;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.cards {
+
+	display: grid;
+	
+	grid-template-columns: repeat(3, 1fr);
+	
+	grid-auto-rows: auto;
+	
+	grid-gap: 1rem;
+	
+	}
+@media screen and (max-width: 600px) {
+    .cards {
+    
+        display: grid;
+        
+        grid-template-columns: repeat(2, 1fr);
+        
+        grid-auto-rows: auto;
+        
+        grid-gap: 1rem;
+        
+        }
+    .news-card {
+        width: 200px; /* Adjust the card width as needed */
+        height: 200px;
+        border: 1px solid #ccc;
+        margin: 10px;
+        overflow: hidden;
+        position: relative;
+    }
+        
+    
+    }
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    height: 100%;
+    display: block;
+}
+.learn-more {
+    background: rgba(0, 0, 0, 0.6); /* Dark space with transparency */
+    color: #fff; /* Text color */
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.card-link:hover .learn-more {
+    opacity: 1;
+}
+.modal-content-dark {
+    background-color: #222 !important;
+    color: #fff !important; 
+    border: 1px solid #555 !important; 
+}
+.modal-header .close {
+    color: #fff !important; 
+}
+.modal-title {
+    color: #DE8D00;
+    font-family: Copperplate;
+}
+.my-form-field {
+border-color: gold !important;
+transition: border-color 0.3s ;
+}
+.my-form-field:hover{
+border-color: gold !important;
+}
+.my-form-field:focus{
+border-color: #0e0d0d !important;
+box-shadow: 0 0 7px gold !important;
+}
+/* com style */
+.postcard{
+    background-color: #343a40;
+    border-radius: 8px;
+    border: none ;
+    margin: 10px !important;
+box-shadow: 0 15px 30px 0 rgba(0,0,0, 0.1);
+font-size: 1.125rem;
+padding-left: 2.5rem;
+padding-right: 2.5rem;
+padding-bottom:  1.5rem;
+margin-bottom: 2rem;
+position: relative;
+
+    
+}
+.postcard h2 {
+	font-size: 24px;
+	font-weight: bold;
+	margin: 0;
+	}
+.postcard strong{
+    color: #ffffff9f !important;
+    font-size: 16px;
+	opacity: 1;
+	margin: 0; 
+}
+.postcard p {
+	font-size: 16px;
+	opacity: 1;
+	margin: 0;
+	}
+/* Custom CSS for dark-themed cards */
+.card-dark {
+    background-color: #343a40 !important; /* Dark background color */
+    color: #ffffff !important; /* Light text color */
+    border: none !important; /* Remove the card border */
+    margin: 10px !important; /* Adjust margin as needed */
+}
+
+.card-dark .card-link {
+    color: #007bff !important; /* Blue link color */
+}
+
+.card-dark .card-link:hover {
+    text-decoration: underline !important;
+}
+/* Custom CSS for action buttons */
+.action-buttons {
+    display: flex !important;
+}
+
+.action-buttons button {
+    padding: 0;
+    margin-right: 10px;
+    color: #cfcfcfaf ; /* Button text color */
+}
+
+.action-buttons button:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Hover text color */
+}
+.linkb:hover{
+color: #0056b3 !important;
+}
+.downbutton :hover {
+    color: #b30000 !important; /* Hover text color */
+}
+/* Custom CSS to style the avatar */
+.avatar {
+    margin-top: .9rem;
+    margin-bottom: 0;
+    width: 20px; /* Adjust the size as needed */
+    height: 20px;
+    background-color: #ffffff; /* Background color of the circular avatar */
+    overflow: hidden;
+    border-radius: 60%; /* Make it circular */
+}
+
+.avatar-image {
+    max-width: 100%;
+    height: auto;
+}
+.sec{
+    display: inline;
+    background-color: #0e0d0d;
+    border-radius: 10px;
+    padding-left: .7rem;
+    padding-right: .5rem;
+    margin-right: 1rem;
+    
+}
+form{
+    display: inline !important;
+}
+.sideform{
+height: 85%;
+width: 30%;
+margin-top: 20px;
+position: fixed;
+z-index: 1;
+top: 0;
+right: 0;
+border-radius: 8px;
+box-shadow: 0 15px 30px 0 rgba(0,0,0, 0.1);
+background-color: #343a40;
+overflow-x: hidden;
+padding-left: 10px;
+padding-right: 10px;
+padding-bottom: 10px;
+margin-top: 70px !important;
+border-radius: 8px;
+border: none ;
+}
+
+.my-form-field2 {
+    transition: border-color 0.3s ;
+    }
+    .my-form-field2:hover{
+    border-color: gold !important;
+    }
+    .my-form-field2:focus{
+    border-color: #0e0d0d !important;
+    box-shadow: 0 0 7px gold !important;
+    }

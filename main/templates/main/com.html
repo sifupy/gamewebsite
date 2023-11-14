@@ -1,0 +1,57 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block comactive %}active{% endblock %}
+{% block content %}
+
+<div class="cantainer" style="margin-right: 30%;padding-bottom: 250px;">
+    <h2>hellllo </h1>
+{% for post in posts %}
+    <div class="postcard">
+        <div>
+        <img src="{% static 'main/images/cover/pic2.jpg' %}" class="rounded-circle avatar img-fluid"  >
+        <strong style="color: #fff; display: inline;">{{post.author2}}    </strong><p style="display: inline; margin-left: 5px;">.{{post.published_time}}</p>
+        </div>
+        <h6 style="color:#fff" >{{post.text1}}</h6>
+        <p>{{post.text}}</p>
+        <div class="action-buttons">
+            <div class="sec">
+                <form action="{% url 'like_page' post.pk %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-link " value="{{post.id}}" style="display: inline;" name='post_id'><i class="fas fa-arrow-up">  {{post.votup.all.count}}</i> </button>
+                </form>
+               
+                <form action="{% url 'dislike_page' post.pk %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-link downbutton" style="display: inline;" value="{{post.id}}" name='post_id'><i class="fas fa-arrow-down">  {{post.votdown.all.count}}</i> </button>
+                </form>
+            </div>
+            <div class="sec">
+            <button class="btn btn-link">
+                <a href="{% url 'post_page' post.id %}" style="text-decoration: none;color: #cfcfcfaf;" class="linkb">
+                <i class="far fa-comments">{{post.comments.all.count}}</i>
+                </a>
+            </button>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>
+<div class="separator"></div>
+
+<div class="sideform">
+    <div class="text-center"> 
+    <h2 style="font-family: Copperplate;color: #fff;">share ur thaught here </h2>
+    </div>
+    <p>u can share anything u think it may interest our community</p>
+    <p>sharing ur openions can be so helpful to others remember sharing is caring </p>
+    <p>do not hesitate to ask question or talk about resource,updates..</p>
+    <form  method="POST" enctype="multipart/form-data" id="myForm" style="color: #fff;">
+        {% csrf_token %}
+        {{form | crispy }}
+     <div class="text-center"> 
+    <input type="submit" value="submit" class="btn btn-primary" style="width: 100px;">
+     </div>
+    </form>
+</div>
+{% endblock %}

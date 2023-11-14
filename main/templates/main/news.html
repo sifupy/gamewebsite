@@ -1,0 +1,53 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block newsactive %}active{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="text-center">
+        <h1 class="title">Latest news</h1>
+        <h3 style="color: #fff;">Fuel Your Battle Passion: Dive into the World of PUBG Warfare Updates</h3>
+    </div>
+    <div class="cards">
+    {% for item in news %}
+    
+    <div class="news-card">
+        <a class="card-link"data-toggle="modal" data-target="#modal{{item.id}}" role="button">
+        <div class="news-image">
+            <img src="{{item.img.url}}" alt="News Image{{item.id}}">
+        </div>
+        <div class="news-title">
+            {{item.title}}
+        </div>
+        <div class="learn-more">
+            Learn More
+        </div>
+    </a>
+    </div>
+  <!-- Modal -->
+  <div class="modal fade" id="modal{{item.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-dark" role="document">
+      <div class="modal-content modal-content-dark">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLongTitle">{{item.title}}</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+           <p> 
+           {{item.description}}
+           </p>
+        </div>
+        <img src="{{item.img.url}}" alt="News Image{{item.id}}">
+      </div>
+    </div>
+  </div>
+    
+    {% endfor %}
+    </div>
+    <div class="float-right">
+        <a href="{% url 'news' %}" style="color: #fff;">see more ></a>
+    </div>
+    <br><br>
+</div>
+{% endblock%}

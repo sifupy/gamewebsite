@@ -1,0 +1,63 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block homeactive %}active{% endblock %}
+{% block content %}
+    <section class="hero">
+        <img src="{% static 'main/images/cover/viv2.png ' %}" alt="coverhero">
+        <h1>Welcome to Pubg:Battlgrounds </h1>
+        <p>Join the battle and conquer your enemies!</p>
+        <a href="https://store.steampowered.com/app/578080/PUBG_BATTLEGROUNDS/" class="btn btn-primary btn-lg">Play Now</a>
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="title">Game Info</h2>
+                <p>Pubg Battlegrounds is an online multiplayer battle royale game developed and published by PUBG Corporation. It is available on multiple platforms, including PC, console, and mobile. The game has gained widespread popularity for its intense gameplay, and it pits players against each other on a shrinking map until only one player or team remains.</p>
+            </div>
+            <div class="col-lg-4">
+                <!-- Sidebar or additional content -->
+                <div class="bg-light p-3">
+                    <h3 style="color:#DE8D00 ;">Explore us </h3>
+        
+        <p><a href="https://store.steampowered.com/app/578080/PUBG_BATTLEGROUNDS/" style="color: #666;text-decoration: underline;">visit us on steam </a></p>
+        <p><a href="https://pubgmap.io/savage.html" style="color: #666;text-decoration: underline;" target="_blank">View Erangel Map</a></p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="separator"></div>
+    <div class="container">
+        <div class="text-center">
+            <h1 class="title">Latest news</h1>
+            <h3 style="color: #fff;">Fuel Your Battle Passion: Dive into the World of PUBG Warfare Updates</h3>
+        </div>
+        <div class="cards">
+        {% for item in news %}
+        
+        <div class="news-card">
+            <a class="card-link" href="{% url 'news' %}">
+            <div class="news-image">
+                <img src="{{item.img.url}}" alt="News Image{{item.id}}">
+            </div>
+            <div class="news-title">
+                {{item.title}}
+            </div>
+            <div class="learn-more">
+                Learn More
+            </div>
+        </a>
+        </div>
+        
+        {% endfor %}
+        </div>
+        <div class="float-right">
+            <a href="{% url 'news' %}" style="color: #fff;">see more ></a>
+        </div>
+        <br><br>
+    </div>
+    <div class="separator"></div>
+        
+        
+        
+{% endblock %}
